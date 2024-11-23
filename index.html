@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلل العملات الرقمية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+    <header>
+        <h1>محلل العملات الرقمية</h1>
+        <div class="header-controls">
+            <button id="themeToggle" class="icon-button">🌙</button>
+            <button id="refreshButton" class="icon-button">🔄</button>
+        </div>
+    </header>
+
+    <div class="controls">
+        <select id="timeframeSelect" class="select">
+            <option value="1m">1 دقيقة</option>
+            <option value="5m">5 دقائق</option>
+            <option value="15m">15 دقيقة</option>
+            <option value="1h" selected>1 ساعة</option>
+            <option value="4h">4 ساعات</option>
+            <option value="1d">يوم</option>
+            <option value="1w">أسبوع</option>
+            <option value="1M">شهر</option>
+        </select>
+
+        <select id="sortSelect" class="select">
+            <option value="time">حسب الوقت</option>
+            <option value="price">حسب السعر</option>
+            <option value="wick">حسب طول الذيل</option>
+        </select>
+
+        <button id="resetSettings" class="button">إعدادات افتراضية</button>
+    </div>
+
+    <main id="signalsContainer" class="signals-grid">
+        <!-- Signals will be inserted here -->
+    </main>
+
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
